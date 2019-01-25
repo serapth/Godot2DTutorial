@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://TitleScene.gd" type="Script" id=1]
+[ext_resource path="res://assets/graphics/title/title.png" type="Texture" id=2]
+[ext_resource path="res://assets/audio/music/InStormAndSunshine.ogg" type="AudioStream" id=3]
+[ext_resource path="res://assets/fonts/animeace.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+
+size = 64
+outline_size = 4
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 4 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 2 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+autoplay = true
+
+[node name="QuitGameButton" type="ToolButton" parent="."]
+margin_left = 406.144
+margin_top = 524.994
+margin_right = 835.144
+margin_bottom = 603.994
+custom_fonts/font = SubResource( 1 )
+text = "Quit Game"
+
+[node name="NewGameButton" type="ToolButton" parent="."]
+margin_left = 411.066
+margin_top = 426.54
+margin_right = 840.066
+margin_bottom = 505.54
+custom_fonts/font = SubResource( 1 )
+text = "New Game"
+
+[connection signal="pressed" from="QuitGameButton" to="." method="_on_QuitGameButton_pressed"]
+[connection signal="pressed" from="NewGameButton" to="." method="_on_NewGameButton_pressed"]

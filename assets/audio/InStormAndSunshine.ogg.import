@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/InStormAndSunshine.ogg-4bd328a02985952ea2947254fb178bea.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/InStormAndSunshine.ogg"
+dest_files=[ "res://.import/InStormAndSunshine.ogg-4bd328a02985952ea2947254fb178bea.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
